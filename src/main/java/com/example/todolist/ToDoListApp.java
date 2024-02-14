@@ -8,12 +8,48 @@ import java.awt.event.ActionListener;
 
 public class ToDoListApp extends JFrame {
 
-    private DefaultListModel<String> setToDoListModel;
     private JList<String> toDoList;
+    private DefaultListModel<String> setToDoListModel;
     private JTextField ToDoListInputField;
 
+    private JButton addTaskButton;
+    private JButton markTaskDoneButton;
+    private JButton deleteTaskButton;
+
+    public JButton getAddTaskButton() {
+        return addTaskButton;
+    }
+
+    public JButton getMarkTaskDoneButton() {
+        return markTaskDoneButton;
+    }
+
+    public JButton getDeleteTaskButton() {
+        return deleteTaskButton;
+    }
+
+    @Override
+    public int getDefaultCloseOperation() {
+        return super.getDefaultCloseOperation();
+    }
+
+    public JList<String> getToDoList() {
+        return toDoList;
+    }
+
+    public JTextField getToDoListInputField() {
+        return ToDoListInputField;
+    }
+
+    public DefaultListModel<String>getSetToDoListModel(){
+        return setToDoListModel;
+    }
+
+
+
     public ToDoListApp() {
-        //set up GUI
+
+        //set up the display window using swing as a GUI
         setTitle("My TODO List App");
         setSize(600, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -102,5 +138,6 @@ public class ToDoListApp extends JFrame {
             return label;
         }
     }
+
 }
 
