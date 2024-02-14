@@ -15,7 +15,7 @@ public class ToDoListApp extends JFrame {
     public ToDoListApp() {
         //set up GUI
         setTitle("My TODO List App");
-        setSize(500, 600);
+        setSize(600, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         setToDoListModel = new DefaultListModel<>();
@@ -92,6 +92,12 @@ public class ToDoListApp extends JFrame {
         @Override
         public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
             JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+            String task = value.toString();
+            if (task.endsWith(" -- Done!")) {
+                label.setForeground(Color.GREEN);
+            } else {
+                label.setForeground(Color.BLACK);
+            }
             label.setText((index + 1) + ". " + value.toString());
             return label;
         }
