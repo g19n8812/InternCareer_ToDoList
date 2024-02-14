@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="InternCareet_ToDoList" />
+        <module name="ToDoListApp" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="InternCareet_ToDoList" target="21" />
+      <module name="InternCareet_ToDoListApp" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
