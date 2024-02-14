@@ -61,7 +61,7 @@ public class ToDoListApp extends JFrame {
 
 
         //allow user to add a task
-        JButton addTaskButton = new JButton("Add");
+        addTaskButton = new JButton("Add");
         addTaskButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -75,7 +75,7 @@ public class ToDoListApp extends JFrame {
 
 
         //allow user to select and mark a task as Done
-        JButton markTaskDoneButton = new JButton("Mark as Done");
+        markTaskDoneButton = new JButton("Mark as Done");
         markTaskDoneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -89,7 +89,7 @@ public class ToDoListApp extends JFrame {
 
 
         //allow user to select and delete a task from the list
-        JButton deleteTaskButton = new JButton("Delete");
+        deleteTaskButton = new JButton("Delete");
         deleteTaskButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
