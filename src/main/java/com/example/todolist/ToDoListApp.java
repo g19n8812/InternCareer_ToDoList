@@ -74,6 +74,7 @@ public class ToDoListApp extends JFrame {
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(scrollPane, BorderLayout.CENTER);
         getContentPane().add(inputPanel, BorderLayout.SOUTH);
+        toDoList.setCellRenderer(new TaskListLables());
 
     }
 
@@ -85,6 +86,15 @@ public class ToDoListApp extends JFrame {
             }
         });
     }
-}
 
+    //number the tasks as the user add/deletes the tasks
+    private class TaskListLables extends DefaultListCellRenderer {
+        @Override
+        public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+            label.setText((index + 1) + ". " + value.toString());
+            return label;
+        }
+    }
+}
 
